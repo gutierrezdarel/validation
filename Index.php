@@ -16,6 +16,12 @@ require_once 'controller/init.php';
         case 'Register':
             $controller = new UserController();
             $controller->InsertU();
+        case 'update':
+            $userController = new UserManipulateController();
+            $userController->updateUser();
+        case 'delete':
+            $userController = new UserManipulateController();
+            $userController->deleteUser();
     }
 
  }

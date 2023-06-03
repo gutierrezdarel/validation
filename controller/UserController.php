@@ -20,7 +20,7 @@
                     $insert = new $this->UserModel;
 
                     if ($insert->InsertUser($insert_uname, $insert_password, $user_type, $fullname)) {
-                        header("location: View/Login.php");
+                        header("location: View/Admin.php");
                     } else {
                         echo 'not inserted';
                     }
@@ -53,12 +53,7 @@
                         }, $roles);
                         
                         $this->redirectBasedOnUserRole($_SESSION['roles']);
-                        // Debug: Print the session roles
-                        // echo "Session Roles: ";
-                        // print_r($_SESSION['roles']);
-                        // echo $_SESSION['roles'];
-                        // var_dump($_SESSION['roles']);
-                        
+    
                     } else {
                         echo 'Invalid password or username';
                         
