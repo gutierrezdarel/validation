@@ -52,14 +52,16 @@
                             return $role->getName();
                         }, $roles);
                         
-                        $this->redirectBasedOnUserRole($_SESSION['roles']);
-    
-                    } else {
-                        echo 'Invalid password or username';
-                        
-                    }
-                }
+                        // $this->redirectBasedOnUserRole($_SESSION['roles']);
 
+                        echo json_encode(['status' => 'success']);
+                        exit();
+                    } else {
+                        // Send a JSON-encoded error response
+                        echo json_encode(['status' => 'error', 'message' => 'Invalid username or password']);
+                        exit();
+                }
+            }
             }
 
                public function redirectBasedOnUserRole($role){

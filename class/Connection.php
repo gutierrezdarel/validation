@@ -3,7 +3,7 @@
 class Connection
 {
     private $user = 'root';
-    private $pass = 'Allen is Great 200%';
+    private $pass = '';
     private $dbname = 'Login';
     public $pdo = null;
 

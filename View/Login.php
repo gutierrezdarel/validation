@@ -15,8 +15,9 @@
             <h1>Login</h1>
             <div class="login">
                 <form action="../Index.php?action=Login" method="POST">
-                    <input type="text" name="username" placeholder="Username">
-                    <input type="password" name="password" placeholder="Password">
+                    <p class="error"></p>
+                    <input type="text" name="username" id="username" placeholder="Username">
+                    <input type="password" name="password" id="password" placeholder="Password">
                     
                     <button type="submit" name="login" value="login">Login</button>
                     <button type="button" id="reg-btn">Register</button>
